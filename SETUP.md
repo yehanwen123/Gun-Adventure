@@ -1,11 +1,15 @@
-# 开发环境配置
+# 开发环境配置指南
 
-1. 安装 [Node.js](https://nodejs.org/) (建议 v14 以上)
-2. 安装 [Visual Studio Code](https://code.visualstudio.com/)
-3. 在 VS Code 中安装插件：
-   - Live Server（用于快速预览 HTML）
-   - ESLint（代码检查）
-   - Prettier（代码格式化）
-4. 克隆仓库：
-   ```bash
-   git clone https://github.com/你的用户名/gun-adventure.git
+## 环境要求
+
+- **Node.js**：v14 或更高版本（[下载地址](https://nodejs.org/)）
+- **现代浏览器**：Chrome、Firefox 或 Edge 最新版
+- **代码编辑器**：推荐 [Visual Studio Code](https://code.visualstudio.com/)
+
+## 第一步：克隆仓库
+
+打开终端（命令提示符 / PowerShell / Terminal），执行：
+
+```bash
+git clone https://github.com/yehanwen123/Gun-Adventure.git
+cd Gun-Adventure
