@@ -9,6 +9,13 @@ const VIEW_WIDTH = 320;
 const VIEW_HEIGHT = 180;
 const MAP_SIZE = { w: 80, h: 60, x: 10, y: 10 };
 
+// 常量配置
+const WORLD_WIDTH = 800;
+const WORLD_HEIGHT = 600;
+const VIEW_WIDTH = 320;
+const VIEW_HEIGHT = 180;
+const MAP_SIZE = { w: 80, h: 60, x: 10, y: 10 };
+
 // 玩家位置
 let player = { 
     x: WORLD_WIDTH / 2,
@@ -39,6 +46,15 @@ floorImage.src = 'assets/dungeon_floor.png'; // 请确保图片存在
 window.addEventListener('keydown', e => {
     if (e.key.startsWith('Arrow') || 'wasd'.includes(e.key.toLowerCase())) e.preventDefault();
     keys[e.key.toLowerCase()] = true;
+});
+window.addEventListener('keyup', e => keys[e.key.toLowerCase()] = false);
+canvas.addEventListener('mousemove', e => {
+    const rect = canvas.getBoundingClientRect();
+    const scaleX = canvas.width / rect.width;
+    const scaleY = canvas.height / rect.height;
+    mouse.screenX = (e.clientX - rect.left) * scaleX;
+    mouse.screenY = (e.clientY - rect.top) * scaleY;
+});
 });
 window.addEventListener('keyup', e => keys[e.key.toLowerCase()] = false);
 canvas.addEventListener('mousemove', e => {
